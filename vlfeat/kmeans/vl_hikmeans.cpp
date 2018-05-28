@@ -169,7 +169,7 @@ boost::python::tuple vl_hikmeans_python(
 
 	object out_tree = hikm_to_python(tree);
 	object agn_obj = object(handle<> ((PyObject*) out_asgn));
-	return boost::python::tuple() make_tuple(out_tree, agn_obj);
+	return boost::python::make_tuple(out_tree, agn_obj);
 }
 
 
