@@ -4,7 +4,7 @@
 """
 Installation script for the vlfeat module
 """
-
+import numpy
 import sys, os
 from distutils.core import Extension, setup
 from distutils.errors import DistutilsFileError
