@@ -42,7 +42,7 @@ vlfeat_dep = ['vlfeat/vl/aib.h', 'vlfeat/vl/generic.h',
               'vlfeat/quickshift/vl_quickshift.h', 'vlfeat/py_vlfeat.h'
               ]
 
-IncludeDirs = ['vlfeat/']
+IncludeDirs = ['vlfeat/',numpy.get_include()]
 LibraryDirs = None
 Libraries = None
 BuildExtension = build_ext
