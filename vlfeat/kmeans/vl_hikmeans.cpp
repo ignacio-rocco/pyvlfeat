@@ -94,7 +94,7 @@ hikm_to_python(VlHIKMTree * tree)
 /** ------------------------------------------------------------------
  ** @internal
  **/
-tuple vl_hikmeans_python(
+boost::python::tuple vl_hikmeans_python(
 		PyArrayObject & data,
 		int K,
 		int nleaves,
