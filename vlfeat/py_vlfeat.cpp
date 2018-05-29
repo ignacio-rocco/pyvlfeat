@@ -51,8 +51,8 @@ BOOST_PYTHON_MODULE(_vlfeat)
 
 	class_<std::vector<VlHIKMTree_python> >("VlHIKMTreeVec")
 		.def(vector_indexing_suite<std::vector<VlHIKMTree_python> >())
-		.def("push_back", static_cast<void (std::vector<VlHIKMTree_python>::*) (VlHIKMTree_python)> (&std::vector<VlHIKMTree_python>::push_back))
-		.def("size", static_cast<std::vector<VlHIKMTree_python>::size_type (std::vector<VlHIKMTree_python>::*) ()> (&std::vector<VlHIKMTree_python>::size))
+		.def("push_back", static_cast<void (std::vector<VlHIKMTree_python>::*) (std::vector<VlHIKMTree_python>::value_type&&)> (&std::vector<VlHIKMTree_python>::push_back))
+		.def("size", static_cast<std::vector<VlHIKMTree_python>::size_type (std::vector<VlHIKMTree_python>::*) () const noexcept> (&std::vector<VlHIKMTree_python>::size))
 		;
 
 	def("vl_ikmeans",      vl_ikmeans_python);
